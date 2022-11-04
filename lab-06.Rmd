@@ -21,7 +21,6 @@ mask_count = c(25.5,19.5,19.5,20.5,19.5,19.5,20.5,19.5,20.5,21.5,19.5,19.5,20.5,
 no_mask_count = c(9.9,9,9.3,9.9,9.9,9.5,9.5,9,8.5,8.5,8.7,8.5,9.9,9.9,10.1,9.5,9.5,9.6,10,8.9,9,8.9,9.1)
 df <- data.frame(date,mask_count,no_mask_count)
 view(df)
-
 ```
 
 
@@ -31,8 +30,14 @@ view(df)
 ggplot(df, aes(x = date, y = mask_count))+
   geom_line(aes(y = mask_count), colour = "orange") +
   geom_line(aes(y = no_mask_count), colour = "blue") +
+<<<<<<< HEAD
   theme(axis.text.x = element_text(size = rel(1),angle = 90)) +
   scale_x_continuous(breaks = date)
+=======
+  ggtitle("Kansas COVID-19 7-day Rolling Average of Daily Cases per 100K") +
+  scale_x_date(name = "Date") +
+  scale_y_continuous(name = "cases per 100K", limits = c(5, 26))
+>>>>>>> a5a9df232ed39817ebb7e6af7e8919a1064d21f9
 
 ```
 

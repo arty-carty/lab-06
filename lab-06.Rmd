@@ -8,6 +8,8 @@ output: github_document
 
 ```{r load-packages, message=FALSE}
 library(tidyverse) 
+library(lubridate)
+library(ggplot2)
 ```
 
 
@@ -26,7 +28,10 @@ view(df)
 ### Exercise 2
 
 ```{r better-viz}
-# add code here
+ggplot(df, aes(x = date, y = mask_count))+
+  geom_line(aes(y = mask_count), colour = "orange") +
+  geom_line(aes(y = no_mask_count), colour = "blue")
+
 ```
 
 

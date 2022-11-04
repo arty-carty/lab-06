@@ -30,7 +30,9 @@ view(df)
 ```{r better-viz}
 ggplot(df, aes(x = date, y = mask_count))+
   geom_line(aes(y = mask_count), colour = "orange") +
-  geom_line(aes(y = no_mask_count), colour = "blue")
+  geom_line(aes(y = no_mask_count), colour = "blue") +
+  theme(axis.text.x = element_text(size = rel(1),angle = 90)) +
+  scale_x_continuous(breaks = date)
 
 ```
 

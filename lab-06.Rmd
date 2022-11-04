@@ -30,8 +30,9 @@ view(df)
 ggplot(df, aes(x = date, y = mask_count))+
   geom_line(aes(y = mask_count), colour = "orange") +
   geom_line(aes(y = no_mask_count), colour = "blue") +
+  ggtitle("Kansas COVID-19 7-day Rolling Average of Daily Cases per 100K") +
   scale_x_date(name = "Date") +
-  scale_y_continuous(name = "cases per 100", limits = c(5, 26))
+  scale_y_continuous(name = "cases per 100K", limits = c(5, 26))
 
 ```
 
